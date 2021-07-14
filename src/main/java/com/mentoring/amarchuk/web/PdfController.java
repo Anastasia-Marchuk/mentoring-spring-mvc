@@ -1,6 +1,6 @@
-package by.prohor.web;
+package com.mentoring.amarchuk.web;
 
-import by.prohor.facade.BookingFacade;
+import com.mentoring.amarchuk.facade.BookingFacade;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.pdf.PdfWriter;

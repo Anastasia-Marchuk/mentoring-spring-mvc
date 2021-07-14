@@ -1,6 +1,6 @@
-package by.prohor.service.parser;
+package com.mentoring.amarchuk.service.parser;
 
-import by.prohor.model.User;
+import com.mentoring.amarchuk.model.User;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;

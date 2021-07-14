@@ -1,13 +1,13 @@
-package by.prohor.facade;
+package com.mentoring.amarchuk.facade;
 
 
-import by.prohor.model.Category;
-import by.prohor.model.Event;
-import by.prohor.model.Ticket;
-import by.prohor.model.User;
-import by.prohor.service.impl.EventServiceImpl;
-import by.prohor.service.impl.TicketServiceImpl;
-import by.prohor.service.impl.UserServiceImpl;
+import com.mentoring.amarchuk.model.Category;
+import com.mentoring.amarchuk.model.Event;
+import com.mentoring.amarchuk.model.Ticket;
+import com.mentoring.amarchuk.model.User;
+import com.mentoring.amarchuk.service.impl.EventServiceImpl;
+import com.mentoring.amarchuk.service.impl.TicketServiceImpl;
+import com.mentoring.amarchuk.service.impl.UserServiceImpl;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Date;

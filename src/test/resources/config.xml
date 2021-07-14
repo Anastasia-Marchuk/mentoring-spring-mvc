@@ -9,21 +9,21 @@
                         http://www.springframework.org/schema/util
                         https://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="by.prohor"/>
+    <context:component-scan base-package="com.mentoring.amarchuk"/>
 
-    <bean id="event1" class="by.prohor.model.Event">
+    <bean id="event1" class="com.mentoring.amarchuk.model.Event">
         <property name="id" value="1"/>
         <property name="title" value="Test"/>
         <property name="date" value="11/01/2011"/>
     </bean>
 
-    <bean id="user1" class="by.prohor.model.User">
+    <bean id="user1" class="com.mentoring.amarchuk.model.User">
         <property name="id" value="1"/>
         <property name="name" value="Test"/>
         <property name="email" value="test@test.com"/>
     </bean>
 
-    <bean id="ticket1" class="by.prohor.model.Ticket">
+    <bean id="ticket1" class="com.mentoring.amarchuk.model.Ticket">
         <property name="id" value="1"/>
         <property name="eventId" value="1"/>
         <property name="userId" value="1"/>
@@ -31,22 +31,22 @@
         <property name="place" value="11"/>
     </bean>
 
-    <util:list id="events" list-class="java.util.ArrayList" value-type="by.prohor.model.Event">
+    <util:list id="events" list-class="java.util.ArrayList" value-type="com.mentoring.amarchuk.model.Event">
         <ref bean="event1"/>
     </util:list>
 
-    <util:list id="users" list-class="java.util.ArrayList" value-type="by.prohor.model.User">
+    <util:list id="users" list-class="java.util.ArrayList" value-type="com.mentoring.amarchuk.model.User">
         <ref bean="user1"/>
     </util:list>
 
-    <util:map id="tickets" map-class="java.util.HashMap" value-type="by.prohor.model.Ticket">
+    <util:map id="tickets" map-class="java.util.HashMap" value-type="com.mentoring.amarchuk.model.Ticket">
         <entry key="ticket: 1" value-ref="ticket1"/>
     </util:map>
 
 
 
 
-    <bean id="eventDao" class="by.prohor.dao.impl.list.EventDaoList"/>
+    <bean id="eventDao" class="com.mentoring.amarchuk.dao.impl.list.EventDaoList"/>
 
     <!--  DAO   -->
 
@@ -54,19 +54,19 @@
 
     <!--  SERVICE   -->
 
-    <bean id="eventService" class="by.prohor.service.impl.EventServiceImpl">
+    <bean id="eventService" class="com.mentoring.amarchuk.service.impl.EventServiceImpl">
         <constructor-arg index="0" ref="eventDaoList"/>
     </bean>
-    <bean id="ticketService" class="by.prohor.service.impl.TicketServiceImpl">
+    <bean id="ticketService" class="com.mentoring.amarchuk.service.impl.TicketServiceImpl">
         <constructor-arg index="0" ref="ticketDaoList"/>
     </bean>
-    <bean id="userService" class="by.prohor.service.impl.UserServiceImpl">
+    <bean id="userService" class="com.mentoring.amarchuk.service.impl.UserServiceImpl">
         <constructor-arg index="0" ref="userDaoList"/>
     </bean>
 
     <!--  FACADE  -->
 
-    <bean id="facadeImpl" class="by.prohor.facade.BookingFacadeImpl">
+    <bean id="facadeImpl" class="com.mentoring.amarchuk.facade.BookingFacadeImpl">
         <constructor-arg index="0" ref="eventService"/>
         <constructor-arg index="1" ref="ticketService"/>
         <constructor-arg index="2" ref="userService"/>

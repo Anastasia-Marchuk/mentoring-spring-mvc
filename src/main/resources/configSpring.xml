@@ -8,7 +8,7 @@
                         http://www.springframework.org/schema/context
                         https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="by.prohor"/>
+    <context:component-scan base-package="com.mentoring.amarchuk"/>
     <context:property-placeholder
             location="classpath*:add_value/prop/event.properties,classpath*:add_value/prop/ticket.properties,classpath*:add_value/prop/user.properties"/>
     <import resource="classpath*:add_value/listEvent.xml"/>
@@ -22,19 +22,19 @@
 
     <!--  SERVICE   -->
 
-    <bean id="eventService" class="by.prohor.service.impl.EventServiceImpl">
+    <bean id="eventService" class="com.mentoring.amarchuk.service.impl.EventServiceImpl">
         <constructor-arg index="0" ref="eventDaoList"/>
     </bean>
-    <bean id="ticketService" class="by.prohor.service.impl.TicketServiceImpl">
+    <bean id="ticketService" class="com.mentoring.amarchuk.service.impl.TicketServiceImpl">
         <constructor-arg index="0" ref="ticketDaoList"/>
     </bean>
-    <bean id="userService" class="by.prohor.service.impl.UserServiceImpl">
+    <bean id="userService" class="com.mentoring.amarchuk.service.impl.UserServiceImpl">
         <constructor-arg index="0" ref="userDaoList"/>
     </bean>
 
     <!--  FACADE  -->
 
-    <bean id="facadeImpl" class="by.prohor.facade.BookingFacadeImpl">
+    <bean id="facadeImpl" class="com.mentoring.amarchuk.facade.BookingFacadeImpl">
         <constructor-arg index="0" ref="eventService"/>
         <constructor-arg index="1" ref="ticketService"/>
         <constructor-arg index="2" ref="userService"/>

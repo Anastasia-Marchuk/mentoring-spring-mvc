@@ -1,8 +1,8 @@
 package com.mentoring.amarchuk;
 
+import com.mentoring.amarchuk.facade.BookingFacadeImpl;
 import com.mentoring.amarchuk.model.Category;
 import com.mentoring.amarchuk.model.User;
-import com.mentoring.amarchuk.facade.BookingFacadeImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
@@ -18,7 +18,7 @@ public class AppSpring {
     public static void main(String[] args) {
 
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("configSpring.xml");
-        BookingFacadeImpl bean = applicationContext.getBean("facadeImpl",BookingFacadeImpl.class);
+        BookingFacadeImpl bean = applicationContext.getBean("facadeImpl", BookingFacadeImpl.class);
         logger.info("Printing ivents with eventId=2");
 
         System.out.println("Ivents with eventId=2:\n"+bean.getEventById(2)+"\n");
@@ -42,7 +42,7 @@ public class AppSpring {
 
         System.out.println("Cancel ticket with id=4:\n"+bean.cancelTicket(4)+"\n");
 
-        System.out.println("Delete all events:\n"+ bean.deleteAllEvents()+"\n");
+       // System.out.println("Delete all events:\n"+ bean.deleteAllEvents()+"\n");
 
 
     }

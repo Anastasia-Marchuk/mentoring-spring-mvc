@@ -1,4 +1,4 @@
-package by.prohor.web.handler;
+package com.mentoring.amarchuk.web.handler;
 
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;

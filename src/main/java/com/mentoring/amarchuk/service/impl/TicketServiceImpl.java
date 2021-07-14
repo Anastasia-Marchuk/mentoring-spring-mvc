@@ -1,12 +1,12 @@
-package by.prohor.service.impl;
+package com.mentoring.amarchuk.service.impl;
 
 
-import by.prohor.dao.TicketDao;
-import by.prohor.model.Category;
-import by.prohor.model.Event;
-import by.prohor.model.Ticket;
-import by.prohor.model.User;
-import by.prohor.service.TicketService;
+import com.mentoring.amarchuk.dao.TicketDao;
+import com.mentoring.amarchuk.model.Category;
+import com.mentoring.amarchuk.model.Event;
+import com.mentoring.amarchuk.model.Ticket;
+import com.mentoring.amarchuk.model.User;
+import com.mentoring.amarchuk.service.TicketService;
 
 import java.util.List;
 

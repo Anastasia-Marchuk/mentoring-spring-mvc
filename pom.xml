@@ -5,13 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>war</packaging>
 
-    <groupId>by.prohorov</groupId>
+    <groupId>by.mentoring.amarchuk</groupId>
     <artifactId>tickets</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -174,17 +174,17 @@
             <version>1.3.1</version>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>commons-io</groupId>-->
-<!--            <artifactId>commons-io</artifactId>-->
-<!--            <version>2.4</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.4</version>
+        </dependency>
 
-        <!--        <dependency>-->
-<!--            <groupId>com.itextpdf</groupId>-->
-<!--            <artifactId>itextpdf</artifactId>-->
-<!--            <version>5.5.10</version>-->
-<!--        </dependency>-->
+                <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>itextpdf</artifactId>
+            <version>5.5.10</version>
+        </dependency>
 
     </dependencies>
     <build>
@@ -192,14 +192,15 @@
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
-                <version>10.0.1</version>
+                <version>9.4.34.v20201102</version>
                 <configuration>
+                    <jvmArgs>-Ddebug=true</jvmArgs>
+                    <httpConnector>
+                        <port>8080</port>
+                    </httpConnector>
                     <webApp>
                         <contextPath>/</contextPath>
                     </webApp>
-                    <httpConnector>
-                        <port>8060</port>
-                    </httpConnector>
                 </configuration>
             </plugin>
             <plugin>

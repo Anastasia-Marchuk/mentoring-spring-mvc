@@ -1,6 +1,6 @@
-package by.prohor.dao;
+package com.mentoring.amarchuk.dao;
 
-import by.prohor.model.Event;
+import com.mentoring.amarchuk.model.Event;
 
 import java.util.Date;
 import java.util.List;

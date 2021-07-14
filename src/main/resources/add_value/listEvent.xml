@@ -11,26 +11,26 @@
 
     <!--Create Beans Event-->
 
-    <bean id="event1" class="by.prohor.model.Event">
+    <bean id="event1" class="com.mentoring.amarchuk.model.Event">
         <property name="id" value="${event.1.id}"/>
         <property name="title" value="${event.1.title}"/>
         <property name="date" value="${event.1.date}"/>
     </bean>
 
-    <bean id="event2" class="by.prohor.model.Event">
+    <bean id="event2" class="com.mentoring.amarchuk.model.Event">
         <property name="id" value="${event.2.id}"/>
         <property name="title" value="${event.2.title}"/>
         <property name="date" value="${event.2.date}"/>
     </bean>
 
-    <bean id="event3" class="by.prohor.model.Event">
+    <bean id="event3" class="com.mentoring.amarchuk.model.Event">
         <property name="id" value="${event.3.id}"/>
         <property name="title" value="${event.3.title}"/>
         <property name="date" value="${event.3.date}"/>
     </bean>
 
     <!--  Add value in ArrayList Event  -->
-    <util:list id="events" list-class="java.util.ArrayList" value-type="by.prohor.model.Event">
+    <util:list id="events" list-class="java.util.ArrayList" value-type="com.mentoring.amarchuk.model.Event">
         <ref bean="event1"/>
         <ref bean="event2"/>
         <ref bean="event3"/>

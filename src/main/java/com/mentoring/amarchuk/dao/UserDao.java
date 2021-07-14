@@ -1,6 +1,6 @@
-package by.prohor.dao;
+package com.mentoring.amarchuk.dao;
 
-import by.prohor.model.User;
+import com.mentoring.amarchuk.model.User;
 
 import java.util.List;
 

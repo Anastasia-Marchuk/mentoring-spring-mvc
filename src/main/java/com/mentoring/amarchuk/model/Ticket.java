@@ -1,4 +1,4 @@
-package by.prohor.model;
+package com.mentoring.amarchuk.model;
 
 import java.util.Objects;
 

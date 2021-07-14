@@ -1,6 +1,4 @@
-package by.prohor.model;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
+package com.mentoring.amarchuk.model;
 
 import java.util.Objects;
 

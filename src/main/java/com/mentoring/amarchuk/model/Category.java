@@ -1,4 +1,4 @@
-package by.prohor.model;
+package com.mentoring.amarchuk.model;
 
 /**
  * Created by Artsiom Prokharau 02.07.2021

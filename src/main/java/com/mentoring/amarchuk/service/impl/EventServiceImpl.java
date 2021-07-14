@@ -1,9 +1,9 @@
-package by.prohor.service.impl;
+package com.mentoring.amarchuk.service.impl;
 
 
-import by.prohor.dao.EventDao;
-import by.prohor.model.Event;
-import by.prohor.service.EventService;
+import com.mentoring.amarchuk.dao.EventDao;
+import com.mentoring.amarchuk.model.Event;
+import com.mentoring.amarchuk.service.EventService;
 
 import java.util.Date;
 import java.util.List;

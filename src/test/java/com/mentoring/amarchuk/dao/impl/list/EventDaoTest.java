@@ -1,7 +1,7 @@
-package by.prohor.dao.impl.list;
+package com.mentoring.amarchuk.dao.impl.list;
 
-import by.prohor.dao.EventDao;
-import by.prohor.model.Event;
+import com.mentoring.amarchuk.dao.EventDao;
+import com.mentoring.amarchuk.model.Event;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;

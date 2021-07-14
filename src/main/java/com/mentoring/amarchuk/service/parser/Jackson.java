@@ -1,10 +1,5 @@
-package by.prohor.service.parser;
+package com.mentoring.amarchuk.service.parser;
 
-import by.prohor.dao.UserDao;
-import by.prohor.model.User;
-import com.fasterxml.jackson.core.JsonGenerator;
-import com.fasterxml.jackson.databind.DeserializationConfig;
-import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import org.springframework.web.multipart.MultipartFile;
 

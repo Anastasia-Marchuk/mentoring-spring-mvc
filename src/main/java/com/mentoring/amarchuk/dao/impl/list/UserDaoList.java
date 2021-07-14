@@ -1,7 +1,7 @@
-package by.prohor.dao.impl.list;
+package com.mentoring.amarchuk.dao.impl.list;
 
-import by.prohor.dao.UserDao;
-import by.prohor.model.User;
+import com.mentoring.amarchuk.dao.UserDao;
+import com.mentoring.amarchuk.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

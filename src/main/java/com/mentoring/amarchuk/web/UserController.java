@@ -1,19 +1,14 @@
-package by.prohor.web;
+package com.mentoring.amarchuk.web;
 
-import by.prohor.facade.BookingFacade;
-import by.prohor.model.User;
+import com.mentoring.amarchuk.facade.BookingFacade;
+import com.mentoring.amarchuk.model.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
-
-/**
- * Created by Artsiom Prokharau 09.07.2021
- */
 
 
 @Controller
@@ -27,14 +22,14 @@ public class UserController {
         this.bookingFacade = bookingFacade;
     }
 
-    @GetMapping("/")
-    public String start(Model model) {
-        List<User> allUsers = bookingFacade.getAllUsers();
-        LOGGER.debug("get all users => {}", allUsers);
-        model.addAttribute("allUser", allUsers);
-        LOGGER.info("Method start. UserController (-- / --)");
-        return "users";
-    }
+//    @GetMapping("/")
+//    public String start(Model model) {
+//        List<User> allUsers = bookingFacade.getAllUsers();
+//        LOGGER.debug("get all users => {}", allUsers);
+//        model.addAttribute("allUser", allUsers);
+//        LOGGER.info("Method start. UserController (-- / --)");
+//        return "users";
+//    }
 
     @GetMapping("/create")
     public String name(@RequestParam("name") String name, @RequestParam("email") String email) {

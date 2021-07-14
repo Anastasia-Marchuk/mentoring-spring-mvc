@@ -1,11 +1,11 @@
-package by.prohor.service.impl;
+package com.mentoring.amarchuk.service.impl;
 
 
-import by.prohor.dao.UserDao;
-import by.prohor.model.User;
-import by.prohor.service.UserService;
-import by.prohor.service.parser.Jackson;
-import by.prohor.service.parser.UserDto;
+import com.mentoring.amarchuk.dao.UserDao;
+import com.mentoring.amarchuk.model.User;
+import com.mentoring.amarchuk.service.UserService;
+import com.mentoring.amarchuk.service.parser.Jackson;
+import com.mentoring.amarchuk.service.parser.UserDto;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;

@@ -1,6 +1,6 @@
-package by.prohor.service;
+package com.mentoring.amarchuk.service;
 
-import by.prohor.model.User;
+import com.mentoring.amarchuk.model.User;
 
 import java.util.List;
 
