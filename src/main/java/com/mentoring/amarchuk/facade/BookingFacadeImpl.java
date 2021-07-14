@@ -13,9 +13,6 @@ import org.springframework.web.multipart.MultipartFile;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created by Artsiom Prokharau 02.07.2021
- */
 
 public class BookingFacadeImpl implements BookingFacade {
 
@@ -117,5 +114,15 @@ public class BookingFacadeImpl implements BookingFacade {
     @Override
     public void preloadUsers(MultipartFile file) {
         userServiceImpl.preloadUsers(file);
+    }
+
+    @Override
+    public List<Ticket> getAllTickets() {
+        return ticketServiceImpl.getAllTickets();
+    }
+
+    @Override
+    public void createTicket(Ticket ticket) {
+        ticketServiceImpl.createTicket();
     }
 }

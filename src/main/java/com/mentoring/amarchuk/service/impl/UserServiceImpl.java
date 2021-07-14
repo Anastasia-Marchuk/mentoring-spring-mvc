@@ -11,10 +11,6 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 import java.util.List;
 
-/**
- * Created by Artsiom Prokharau 02.07.2021
- */
-
 
 public class UserServiceImpl implements UserService {
 

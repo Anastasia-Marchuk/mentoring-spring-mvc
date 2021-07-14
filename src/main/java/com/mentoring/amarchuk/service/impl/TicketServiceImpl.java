@@ -10,9 +10,6 @@ import com.mentoring.amarchuk.service.TicketService;
 
 import java.util.List;
 
-/**
- * Created by Artsiom Prokharau 02.07.2021
- */
 
 
 public class TicketServiceImpl implements TicketService {
@@ -41,5 +38,15 @@ public class TicketServiceImpl implements TicketService {
     @Override
     public boolean cancelTicket(long ticketId) {
         return ticketDao.cancelTicket(ticketId);
+    }
+
+    @Override
+    public List<Ticket> getAllTickets() {
+        return ticketDao.getAllTickets();
+    }
+
+    @Override
+    public void createTicket() {
+        ticketDao.createTicket();
     }
 }

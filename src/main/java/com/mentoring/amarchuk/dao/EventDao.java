@@ -5,11 +5,6 @@ import com.mentoring.amarchuk.model.Event;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created by Artsiom Prokharau 08.07.2021
- */
-
-
 public interface EventDao {
 
     /**

@@ -8,13 +8,12 @@ import com.mentoring.amarchuk.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-/**
- * Created by Artsiom Prokharau 02.07.2021
- */
+
 
 @Repository
 public class TicketDaoList implements TicketDao {
@@ -50,6 +49,21 @@ public class TicketDaoList implements TicketDao {
     @Override
     public int size() {
         return tickets.size();
+    }
+
+    @Override
+    public List<Ticket> getAllTickets() {
+        List <Ticket> list=new LinkedList<>();
+        for (Map.Entry<String, Ticket> pair: tickets.entrySet())
+        {
+            list.add(pair.getValue());
+        }
+        return list;
+    }
+
+    @Override
+    public void createTicket() {
+
     }
 
 

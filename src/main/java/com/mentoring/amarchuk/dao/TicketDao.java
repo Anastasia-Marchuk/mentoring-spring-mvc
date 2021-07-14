@@ -57,4 +57,8 @@ public interface TicketDao {
      * @return size map
      */
     int size();
+
+    List<Ticket> getAllTickets();
+
+    void createTicket();
 }

@@ -4,11 +4,6 @@ import com.mentoring.amarchuk.model.User;
 
 import java.util.List;
 
-/**
- * Created by Artsiom Prokharau 08.07.2021
- */
-
-
 public interface UserService {
 
     /**

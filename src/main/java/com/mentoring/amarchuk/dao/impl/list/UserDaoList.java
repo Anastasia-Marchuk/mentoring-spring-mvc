@@ -8,24 +8,20 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * Created by Artsiom Prokharau 02.07.2021
- */
 
 @Repository
 public class UserDaoList implements UserDao {
-
     @Autowired
     private List<User> users;
 
     @Override
     public User getUserById(long userId) {
-        return null;
+        return users.stream().filter(o -> o.getId()==userId).findAny().get();
     }
 
     @Override
     public User getUserByEmail(String email) {
-        return null;
+        return users.stream().filter(o -> o.getEmail() == email).findAny().get();
     }
 
     @Override
@@ -41,7 +37,9 @@ public class UserDaoList implements UserDao {
 
     @Override
     public User updateUser(User user) {
-        return null;
+        users.remove(users.stream().filter(o -> o.getId() == user.getId()).collect(Collectors.toList()).get(0));
+        users.add(user);
+        return users.get((int) user.getId());
     }
 
     @Override

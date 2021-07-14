@@ -9,9 +9,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * Created by Artsiom Prokharau 02.07.2021
- */
 
 @Repository
 public class EventDaoList implements EventDao {

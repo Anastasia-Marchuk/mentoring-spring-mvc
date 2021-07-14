@@ -53,4 +53,7 @@ public interface TicketService {
      */
     boolean cancelTicket(long ticketId);
 
+    List<Ticket> getAllTickets();
+
+    void createTicket();
 }

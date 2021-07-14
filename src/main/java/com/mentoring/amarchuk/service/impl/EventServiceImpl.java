@@ -8,10 +8,6 @@ import com.mentoring.amarchuk.service.EventService;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created by Artsiom Prokharau 02.07.2021
- */
-
 
 public class EventServiceImpl implements EventService {
 

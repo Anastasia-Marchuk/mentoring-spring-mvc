@@ -17,9 +17,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-/**
- * Created by Artsiom Prokharau 10.07.2021
- */
+
 
 @Controller
 public class PdfController {
@@ -35,7 +33,7 @@ public class PdfController {
         FileOutputStream fileOutputStream = new FileOutputStream("html.pdf");
         PdfWriter writer = PdfWriter.getInstance(document, fileOutputStream);
         document.open();
-        XMLWorkerHelper.getInstance().parseXHtml(writer, document, new FileInputStream("src/main/webapp/WEB-INF/templates/users.html"));
+        XMLWorkerHelper.getInstance().parseXHtml(writer, document, new FileInputStream("src/main/webapp/WEB-INF/pages/list_users.html"));
         document.close();
 
         return new FileSystemResource("html.pdf");

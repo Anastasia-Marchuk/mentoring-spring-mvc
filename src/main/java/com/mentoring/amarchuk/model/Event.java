@@ -3,9 +3,6 @@ package com.mentoring.amarchuk.model;
 import java.util.Date;
 import java.util.Objects;
 
-/**
- * Created by Artsiom Prokharau 02.07.2021
- */
 
 public class Event {
 
