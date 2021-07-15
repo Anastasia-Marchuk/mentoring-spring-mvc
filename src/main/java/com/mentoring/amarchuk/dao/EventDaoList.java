@@ -1,4 +1,4 @@
-package com.mentoring.amarchuk.dao.impl.list;
+package com.mentoring.amarchuk.dao;
 
 import com.mentoring.amarchuk.dao.EventDao;
 import com.mentoring.amarchuk.model.Event;

@@ -46,7 +46,7 @@
 
 
 
-    <bean id="eventDao" class="com.mentoring.amarchuk.dao.impl.list.EventDaoList"/>
+    <bean id="eventDao" class="com.mentoring.amarchuk.dao.EventDaoList"/>
 
     <!--  DAO   -->
 
@@ -54,13 +54,13 @@
 
     <!--  SERVICE   -->
 
-    <bean id="eventService" class="com.mentoring.amarchuk.service.impl.EventServiceImpl">
+    <bean id="eventService" class="com.mentoring.amarchuk.service.EventServiceImpl">
         <constructor-arg index="0" ref="eventDaoList"/>
     </bean>
-    <bean id="ticketService" class="com.mentoring.amarchuk.service.impl.TicketServiceImpl">
+    <bean id="ticketService" class="com.mentoring.amarchuk.service.TicketServiceImpl">
         <constructor-arg index="0" ref="ticketDaoList"/>
     </bean>
-    <bean id="userService" class="com.mentoring.amarchuk.service.impl.UserServiceImpl">
+    <bean id="userService" class="com.mentoring.amarchuk.service.UserServiceImpl">
         <constructor-arg index="0" ref="userDaoList"/>
     </bean>
 

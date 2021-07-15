@@ -5,9 +5,9 @@ import com.mentoring.amarchuk.model.Category;
 import com.mentoring.amarchuk.model.Event;
 import com.mentoring.amarchuk.model.Ticket;
 import com.mentoring.amarchuk.model.User;
-import com.mentoring.amarchuk.service.impl.EventServiceImpl;
-import com.mentoring.amarchuk.service.impl.TicketServiceImpl;
-import com.mentoring.amarchuk.service.impl.UserServiceImpl;
+import com.mentoring.amarchuk.service.EventServiceImpl;
+import com.mentoring.amarchuk.service.TicketServiceImpl;
+import com.mentoring.amarchuk.service.UserServiceImpl;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Date;

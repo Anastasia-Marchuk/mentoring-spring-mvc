@@ -1,4 +1,4 @@
-package com.mentoring.amarchuk.dao.impl.list;
+package com.mentoring.amarchuk.dao;
 
 import com.mentoring.amarchuk.dao.TicketDao;
 import com.mentoring.amarchuk.model.Category;
@@ -74,16 +74,7 @@ public class TicketDaoList implements TicketDao {
     }
 
 
-//    @Override
-//    public void preloadTickets(MultipartFile file) {
-//
-//    }
-
     public void preloadTickets(List<Ticket> list) {
-//        for (int i = 0; i <list.size() ; i++) {
-//            long newId=tickets.size()+1;
-//            tickets.put("ticket" + newId, list.get(i));
-//        }
 
         for (int i = 0; i <list.size() ; i++) {
             long newId=tickets.size()+1;

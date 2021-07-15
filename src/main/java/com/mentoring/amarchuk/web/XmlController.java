@@ -18,7 +18,6 @@ public class XmlController {
 
     @PostMapping(value = "/xml", produces = MediaType.TEXT_HTML_VALUE)
     public String getPageXml(@RequestParam("file") MultipartFile file) {
-      //  bookingFacade.preloadUsers(file);
         bookingFacade.preloadTickets(file);
         return "redirect:/allTickets";
     }

@@ -1,4 +1,4 @@
-package com.mentoring.amarchuk.service.impl;
+package com.mentoring.amarchuk.service;
 
 import com.mentoring.amarchuk.dao.EventDao;
 import com.mentoring.amarchuk.model.Event;
@@ -18,7 +18,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-class EventServiceImplTest {
+class EventServiceTest {
 
     @InjectMocks
     EventServiceImpl eventService;
@@ -26,53 +26,47 @@ class EventServiceImplTest {
     @Mock
     EventDao eventDao;
 
+    Event event1 = new Event((long) 1, "TestEvent", new Date("07/07/2021"));
+    Event event2 = new Event((long) 1, "TestEvent", new Date("07/07/2021"));
+
     @Test
     void getEventById() {
-        Event event = new Event((long) 1, "Mock", new Date("12/12/2012"));
 
-        when(eventDao.getEventById(any(Long.class))).thenReturn(event);
+        when(eventDao.getEventById(any(Long.class))).thenReturn(event1);
 
         Event eventById = eventService.getEventById(0);
-        assertEquals(eventById, event);
+        assertEquals(eventById, event1);
     }
 
     @Test
     void getEventsByTitle() {
-        Event event1 = new Event((long) 1, "Mock", new Date("12/12/2012"));
-        Event event2 = new Event((long) 1, "Mock", new Date("12/12/2012"));
         List<Event> list = Arrays.asList(event1, event2);
 
         when(eventDao.getEventsByTitle(any(), any(Integer.class), any(Integer.class))).thenReturn(list);
 
-        List<Event> mock = eventService.getEventsByTitle("Mock", 1, 1);
+        List<Event> mock = eventService.getEventsByTitle("TestEvent", 1, 1);
         assertEquals(list.size(), mock.size());
     }
 
     @Test
     void getEventsForDay() {
-        Event event1 = new Event((long) 1, "Mock", new Date("12/12/2012"));
-        Event event2 = new Event((long) 1, "Mock", new Date("12/12/2012"));
         List<Event> list = Arrays.asList(event1, event2);
-
         when(eventDao.getEventsForDay(any(), any(Integer.class), any(Integer.class))).thenReturn(list);
-
-        List<Event> mock = eventService.getEventsForDay(new Date("12/12/2012"), 1, 1);
+        List<Event> mock = eventService.getEventsForDay(new Date("07/07/2021"), 1, 1);
         assertEquals(list.size(), mock.size());
     }
 
     @Test
     void createEvent() {
-        Event event = new Event((long) 1, "Mock", new Date("12/12/2012"));
-        when(eventDao.createEvent(any())).thenReturn(event);
-        assertEquals(eventService.createEvent(event), event);
+        when(eventDao.createEvent(any())).thenReturn(event1);
+        assertEquals(eventService.createEvent(event1), event1);
 
     }
 
     @Test
     void updateEvent() {
-        Event event = new Event((long) 1, "Mock", new Date("12/12/2012"));
-        when(eventDao.updateEvent(any())).thenReturn(event);
-        assertEquals(eventService.updateEvent(event), event);
+        when(eventDao.updateEvent(any())).thenReturn(event1);
+        assertEquals(eventService.updateEvent(event1), event1);
     }
 
     @Test

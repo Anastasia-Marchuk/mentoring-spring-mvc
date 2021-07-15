@@ -1,4 +1,4 @@
-package com.mentoring.amarchuk.service.impl;
+package com.mentoring.amarchuk.service;
 
 
 import com.mentoring.amarchuk.dao.UserDao;

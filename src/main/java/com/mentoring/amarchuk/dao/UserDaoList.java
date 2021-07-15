@@ -1,4 +1,4 @@
-package com.mentoring.amarchuk.dao.impl.list;
+package com.mentoring.amarchuk.dao;
 
 import com.mentoring.amarchuk.dao.UserDao;
 import com.mentoring.amarchuk.model.User;
@@ -32,6 +32,11 @@ public class UserDaoList implements UserDao {
     @Override
     public User createUser(User user) {
         long id =users.size()+1;
+        for (int i = 0; i < users.size(); i++) {
+            if (id==users.get(i).getId()){
+                id++;
+            }
+        }
         user.setId(id);
         users.add(user);
         return user;

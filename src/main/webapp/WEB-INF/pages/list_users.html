@@ -65,7 +65,7 @@
                 <td th:text="${user.getName()}">Stacy</td>
                 <td th:text="${user.getEmail()}">stasy@gmail.com</td>
                 <td>
-                    <a class="aEdit" href="#">Update</a>
+                    <a class="aEdit" th:href="@{/update/{id}(id=${user.getId})}">Update</a>
                     <a class="aDelete" th:href="@{/delete/{id}(id=${user.getId})}">Delete</a>
                 </td>
             </tr>

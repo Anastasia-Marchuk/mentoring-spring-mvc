@@ -5,6 +5,8 @@ import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.pdf.PdfWriter;
 import com.itextpdf.tool.xml.XMLWorkerHelper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.http.MediaType;
@@ -24,24 +26,13 @@ public class PdfController {
 
     @Autowired
     BookingFacade bookingFacade;
+    private static final Logger LOGGER = LoggerFactory.getLogger(PdfController.class);
 
-    @GetMapping(value = "/pdf", produces = MediaType.APPLICATION_PDF_VALUE)
-    @ResponseBody
-    public FileSystemResource getFile(Model model) throws IOException, DocumentException {
-        model.addAttribute("allUser", bookingFacade.getAllUsers());
-        Document document = new Document();
-        FileOutputStream fileOutputStream = new FileOutputStream("html.pdf");
-        PdfWriter writer = PdfWriter.getInstance(document, fileOutputStream);
-        document.open();
-        XMLWorkerHelper.getInstance().parseXHtml(writer, document, new FileInputStream("src/main/webapp/WEB-INF/pages/list_users.html"));
-        document.close();
-
-        return new FileSystemResource("html.pdf");
-    }
 
     @GetMapping(value = "/pdfTickets", produces = MediaType.APPLICATION_PDF_VALUE)
     @ResponseBody
     public FileSystemResource getFileTickets(Model model) throws IOException, DocumentException {
+        LOGGER.debug("Get pdf of tickets");
         model.addAttribute("allUser", bookingFacade.getAllUsers());
         Document document = new Document();
         FileOutputStream fileOutputStream = new FileOutputStream("html.pdf");
