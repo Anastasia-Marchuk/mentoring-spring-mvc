@@ -7,9 +7,13 @@ import com.mentoring.amarchuk.model.Event;
 import com.mentoring.amarchuk.model.Ticket;
 import com.mentoring.amarchuk.model.User;
 import com.mentoring.amarchuk.service.TicketService;
+import com.mentoring.amarchuk.service.parser.Jackson;
+import com.mentoring.amarchuk.service.parser.TicketDto;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
-
+import java.util.Map;
 
 
 public class TicketServiceImpl implements TicketService {
@@ -49,4 +53,19 @@ public class TicketServiceImpl implements TicketService {
     public void createTicket(Ticket ticket) {
         ticketDao.createTicket(ticket);
     }
+
+    public void preloadTickets(MultipartFile file) {
+
+        TicketDto ticketDto = null;
+        try {
+            ticketDto = new Jackson(file).loaderXmlFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        List<Ticket> tickets=ticketDto.getTickets();
+        //Map<String, Ticket> tickets = ticketDto.getTickets();
+        ticketDao.preloadTickets(tickets);
+    }
+
+
 }

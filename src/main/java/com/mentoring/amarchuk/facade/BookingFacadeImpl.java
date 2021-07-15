@@ -111,9 +111,14 @@ public class BookingFacadeImpl implements BookingFacade {
         return ticketServiceImpl.cancelTicket(ticketId);
     }
 
+//    @Override
+//    public void preloadUsers(MultipartFile file) {
+//        userServiceImpl.preloadUsers(file);
+//    }
+
     @Override
-    public void preloadUsers(MultipartFile file) {
-        userServiceImpl.preloadUsers(file);
+    public void preloadTickets(MultipartFile file) {
+        ticketServiceImpl.preloadTickets(file);
     }
 
     @Override

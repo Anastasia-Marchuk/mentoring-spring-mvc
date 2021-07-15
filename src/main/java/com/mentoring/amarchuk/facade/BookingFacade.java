@@ -166,7 +166,9 @@ public interface BookingFacade {
      */
     boolean cancelTicket(long ticketId);
 
-    void preloadUsers(MultipartFile file);
+   // void preloadUsers(MultipartFile file);
+
+    void preloadTickets(MultipartFile file);
 
     List<Ticket> getAllTickets();
 

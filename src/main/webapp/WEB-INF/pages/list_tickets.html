@@ -38,6 +38,18 @@ td {
     <button type="submit">Create new ticket</button>
 <p></a></p>
 
+<form method="POST" action="/xml" enctype="multipart/form-data">
+    <table>
+        <tr>
+            <td><label path="file">Choose a file for adding tickets</label></td>
+            <td><input type="file" name="file" /></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit" /></td>
+        </tr>
+    </table>
+</form>
+
 <section>
     <div>
         <table border="1">

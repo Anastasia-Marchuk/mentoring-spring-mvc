@@ -8,9 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-/**
- * Created by Artsiom Prokharau 12.07.2021
- */
+
 
 @Controller
 public class XmlController {
@@ -20,7 +18,8 @@ public class XmlController {
 
     @PostMapping(value = "/xml", produces = MediaType.TEXT_HTML_VALUE)
     public String getPageXml(@RequestParam("file") MultipartFile file) {
-        bookingFacade.preloadUsers(file);
-        return "redirect:/";
+      //  bookingFacade.preloadUsers(file);
+        bookingFacade.preloadTickets(file);
+        return "redirect:/allTickets";
     }
 }

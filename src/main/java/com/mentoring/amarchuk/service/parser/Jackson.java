@@ -15,10 +15,10 @@ public class Jackson {
         this.file = file;
     }
 
-    public UserDto loaderXmlFile() throws IOException {
+    public TicketDto loaderXmlFile() throws IOException {
         XmlMapper xmlMapper = new XmlMapper();
         InputStream inputStream = file.getInputStream();
-        return xmlMapper.readValue(inputStream, UserDto.class);
+        return xmlMapper.readValue(inputStream, TicketDto.class);
     }
 }
 

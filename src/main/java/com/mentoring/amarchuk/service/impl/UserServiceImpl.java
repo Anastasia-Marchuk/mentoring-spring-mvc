@@ -5,7 +5,6 @@ import com.mentoring.amarchuk.dao.UserDao;
 import com.mentoring.amarchuk.model.User;
 import com.mentoring.amarchuk.service.UserService;
 import com.mentoring.amarchuk.service.parser.Jackson;
-import com.mentoring.amarchuk.service.parser.UserDto;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
@@ -55,14 +54,14 @@ public class UserServiceImpl implements UserService {
         return userDao.getAllUsers();
     }
 
-    public void preloadUsers(MultipartFile file) {
-        UserDto userDto = null;
-        try {
-            userDto = new Jackson(file).loaderXmlFile();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        List<User> users = userDto.getUsers();
-        userDao.preloadUsers(users);
-    }
+//    public void preloadUsers(MultipartFile file) {
+//        UserDto userDto = null;
+//        try {
+//            userDto = new Jackson(file).loaderXmlFile();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        List<User> users = userDto.getUsers();
+//        userDao.preloadUsers(users);
+//    }
 }

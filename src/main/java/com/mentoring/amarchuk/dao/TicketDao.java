@@ -4,6 +4,7 @@ import com.mentoring.amarchuk.model.Category;
 import com.mentoring.amarchuk.model.Event;
 import com.mentoring.amarchuk.model.Ticket;
 import com.mentoring.amarchuk.model.User;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -61,4 +62,7 @@ public interface TicketDao {
     List<Ticket> getAllTickets();
 
     void createTicket(Ticket ticket);
+
+
+    void preloadTickets(List<Ticket>list);
 }

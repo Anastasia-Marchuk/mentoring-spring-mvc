@@ -7,7 +7,9 @@ import com.mentoring.amarchuk.model.Ticket;
 import com.mentoring.amarchuk.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -69,6 +71,24 @@ public class TicketDaoList implements TicketDao {
         ticket.setId(newId);
         tickets.put("ticket" + newId, ticket);
 
+    }
+
+
+//    @Override
+//    public void preloadTickets(MultipartFile file) {
+//
+//    }
+
+    public void preloadTickets(List<Ticket> list) {
+//        for (int i = 0; i <list.size() ; i++) {
+//            long newId=tickets.size()+1;
+//            tickets.put("ticket" + newId, list.get(i));
+//        }
+
+        for (int i = 0; i <list.size() ; i++) {
+            long newId=tickets.size()+1;
+            tickets.put("ticket" + newId, list.get(i));
+        }
     }
 
 
