@@ -40,16 +40,18 @@ td {
         <table border="1">
             <thead>
             <tr>
-                <th>Name</th>
-                <th>Email</th>
+                <th>Title</th>
+                <th>Id</th>
+                <th>Date</th>
                 <th></th>
             </tr>
             </thead>
 
             <tbody>
             <tr th:each="event : ${allEvents}">
-                <td th:text="${event.getName()}"></td>
-                <td th:text="${event.getEmail()}"></td>
+                <td th:text="${event.getTitle()}"></td>
+                <td th:text="${event.getId()}"></td>
+                <td th:text="${event.getDate()}"></td>
                 <td>
                     <a class="aDelete" th:href="@{/delete/{id}(id=${event.getId})}">Delete</a>
                 </td>
@@ -59,9 +61,12 @@ td {
 
     </div>
 </section>
+
+<p>
 <a href="/">
     <button><a th:href="@{/pdf}">Open PDF</a></button>
 </a>
+</p>
 </body>
 
 </body>

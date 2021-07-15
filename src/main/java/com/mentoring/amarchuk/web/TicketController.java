@@ -57,6 +57,7 @@ public class TicketController {
         return "facade";
     }
 
+
     @GetMapping("/newTicket")
     public String createTicket() {
         return "new_ticket";

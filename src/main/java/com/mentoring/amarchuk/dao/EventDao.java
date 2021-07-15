@@ -65,4 +65,5 @@ public interface EventDao {
      */
     int size();
 
+    List<Event> getAllEvents();
 }

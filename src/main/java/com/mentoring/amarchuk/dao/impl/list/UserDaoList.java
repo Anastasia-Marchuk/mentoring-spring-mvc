@@ -31,6 +31,8 @@ public class UserDaoList implements UserDao {
 
     @Override
     public User createUser(User user) {
+        long id =users.size()+1;
+        user.setId(id);
         users.add(user);
         return user;
     }

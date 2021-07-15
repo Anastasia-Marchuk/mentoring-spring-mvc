@@ -55,5 +55,5 @@ public interface TicketService {
 
     List<Ticket> getAllTickets();
 
-    void createTicket();
+    void createTicket(Ticket ticket);
 }

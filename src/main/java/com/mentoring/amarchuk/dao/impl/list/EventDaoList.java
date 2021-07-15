@@ -53,4 +53,9 @@ public class EventDaoList implements EventDao {
         return events.size();
     }
 
+    @Override
+    public List<Event> getAllEvents() {
+        return events;
+    }
+
 }

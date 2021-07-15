@@ -60,5 +60,5 @@ public interface TicketDao {
 
     List<Ticket> getAllTickets();
 
-    void createTicket();
+    void createTicket(Ticket ticket);
 }

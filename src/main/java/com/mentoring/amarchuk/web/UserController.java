@@ -103,39 +103,5 @@ public class UserController {
         return "new_user";
     }
 
-//
-////    @GetMapping("/")
-////    public String start(Model model) {
-////        List<User> allUsers = bookingFacade.getAllUsers();
-////        LOGGER.debug("get all users => {}", allUsers);
-////        model.addAttribute("allUser", allUsers);
-////        LOGGER.info("Method start. UserController (-- / --)");
-////        return "users";
-////    }
-//
-//    @GetMapping("/create")
-//    public String name(@RequestParam("name") String name, @RequestParam("email") String email) {
-//        LOGGER.debug("Create user with name ({}) and email ({})", name, email);
-//        User user = new User();
-//        user.setName(name);
-//        user.setEmail(email);
-//        bookingFacade.createUser(user);
-//        LOGGER.info("Method start. UserController (-- /create --)");
-//        return "redirect:/";
-//    }
-//
-//    @GetMapping("/delete/{id}")
-//    public String delete(@PathVariable("id") int id) {
-//        LOGGER.debug("Delete user with id ({})", id);
-//        bookingFacade.deleteUser(id);
-//        LOGGER.info("Method start. UserController (-- /delete/{id} --)");
-//        return "redirect:/";
-//    }
-//
-//    @GetMapping("/new")
-//    public String create() {
-//        LOGGER.info("Method start. UserController (-- /new --)");
-//        return "user_add";
-//    }
 
 }

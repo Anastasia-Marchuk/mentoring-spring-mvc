@@ -171,4 +171,6 @@ public interface BookingFacade {
     List<Ticket> getAllTickets();
 
     void createTicket(Ticket ticket);
+
+    List<Event> getAllEvents();
 }

@@ -47,4 +47,7 @@ public class EventServiceImpl implements EventService {
         return eventDao.deleteEvent(eventId);
     }
 
+    public List<Event> getAllEvents() {
+       return eventDao.getAllEvents();
+    }
 }

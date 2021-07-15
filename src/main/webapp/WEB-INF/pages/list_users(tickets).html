@@ -52,21 +52,22 @@
         <table border="1">
             <thead>
             <tr>
-                <th >Id</th>
-                <th>Name</th>
-                <th>Email</th>
+                <th>eventId</th>
+                <th>userId</th>
+                <th>category</th>
+                <th>place</th>
                 <th></th>
             </tr>
             </thead>
 
             <tbody>
-            <tr th:each="user : ${allUsers}">
-                <td th:text="${user.getId()}">1</td>
-                <td th:text="${user.getName()}">Stacy</td>
-                <td th:text="${user.getEmail()}">stasy@gmail.com</td>
+            <tr th:each="ticket : ${allTickets}">
+                <td th:text="${ticket.getEventId()}">1</td>
+                <td th:text="${ticket.getUserId()}">3</td>
+                <td th:text="${ticket.getCategory()}">PREMIUM</td>
+                <td th:text="${ticket.getPlace()}">8</td>
                 <td>
-                    <a class="aEdit" href="#">Update</a>
-                    <a class="aDelete" th:href="@{/delete/{id}(id=${user.getId})}">Delete</a>
+                    <a class="aDelete" th:href="@{/deleteTicket/{id}(id=${ticket.getEventId})}">Cancel</a>
                 </td>
             </tr>
             </tbody>

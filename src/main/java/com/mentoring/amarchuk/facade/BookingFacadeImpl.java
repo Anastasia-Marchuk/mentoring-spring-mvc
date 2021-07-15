@@ -123,6 +123,11 @@ public class BookingFacadeImpl implements BookingFacade {
 
     @Override
     public void createTicket(Ticket ticket) {
-        ticketServiceImpl.createTicket();
+        ticketServiceImpl.createTicket(ticket);
+    }
+
+    @Override
+    public List<Event> getAllEvents() {
+        return eventServiceImpl.getAllEvents();
     }
 }

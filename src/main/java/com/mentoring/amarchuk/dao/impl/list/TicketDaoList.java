@@ -43,7 +43,8 @@ public class TicketDaoList implements TicketDao {
 
     @Override
     public boolean cancelTicket(long ticketId) {
-        return false;
+        return tickets.keySet().removeIf(key -> key.equals("ticket" +ticketId));
+
     }
 
     @Override
@@ -62,7 +63,11 @@ public class TicketDaoList implements TicketDao {
     }
 
     @Override
-    public void createTicket() {
+    public void createTicket(Ticket ticket) {
+
+        long newId=tickets.size()+1;
+        ticket.setId(newId);
+        tickets.put("ticket" + newId, ticket);
 
     }
 
