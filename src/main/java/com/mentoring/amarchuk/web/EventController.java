@@ -1,16 +1,12 @@
 package com.mentoring.amarchuk.web;
 
 import com.mentoring.amarchuk.facade.BookingFacade;
-import com.mentoring.amarchuk.model.Category;
 import com.mentoring.amarchuk.model.Event;
-import com.mentoring.amarchuk.model.Ticket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 

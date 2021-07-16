@@ -44,7 +44,7 @@ public class EventDaoList implements EventDao {
 
     @Override
     public boolean deleteEvent(long eventId) {
-        Event event = events.get((int) eventId);
+        Event event = events.get((int) eventId-1);
         return events.remove(event);
     }
 

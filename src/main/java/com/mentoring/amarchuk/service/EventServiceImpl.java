@@ -4,13 +4,16 @@ package com.mentoring.amarchuk.service;
 import com.mentoring.amarchuk.dao.EventDao;
 import com.mentoring.amarchuk.model.Event;
 import com.mentoring.amarchuk.service.EventService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
 
-
+@Service
 public class EventServiceImpl implements EventService {
 
+    @Autowired
     EventDao eventDao;
 
     public EventServiceImpl(EventDao eventDao) {

@@ -1,6 +1,5 @@
 package com.mentoring.amarchuk.dao;
 
-import com.mentoring.amarchuk.dao.UserDao;
 import com.mentoring.amarchuk.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -11,6 +10,7 @@ import java.util.stream.Collectors;
 
 @Repository
 public class UserDaoList implements UserDao {
+
     @Autowired
     private List<User> users;
 

@@ -38,7 +38,7 @@ public class PdfController {
         FileOutputStream fileOutputStream = new FileOutputStream("html.pdf");
         PdfWriter writer = PdfWriter.getInstance(document, fileOutputStream);
         document.open();
-        XMLWorkerHelper.getInstance().parseXHtml(writer, document, new FileInputStream("src/main/webapp/WEB-INF/pages/pdf_tickets.html"));
+        XMLWorkerHelper.getInstance().parseXHtml(writer, document, new FileInputStream("src/main/webapp/WEB-INF/templates/pdf_tickets.html"));
         document.close();
 
         return new FileSystemResource("html.pdf");
@@ -53,7 +53,7 @@ public class PdfController {
         FileOutputStream fileOutputStream = new FileOutputStream("html.pdf");
         PdfWriter writer = PdfWriter.getInstance(document, fileOutputStream);
         document.open();
-        XMLWorkerHelper.getInstance().parseXHtml(writer, document, new FileInputStream("src/main/webapp/WEB-INF/pages/list_users.html"));
+        XMLWorkerHelper.getInstance().parseXHtml(writer, document, new FileInputStream("src/main/webapp/WEB-INF/templates/list_users.html"));
         document.close();
 
         return new FileSystemResource("html.pdf");

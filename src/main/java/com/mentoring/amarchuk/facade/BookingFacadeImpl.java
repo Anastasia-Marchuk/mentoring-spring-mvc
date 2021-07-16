@@ -8,23 +8,22 @@ import com.mentoring.amarchuk.model.User;
 import com.mentoring.amarchuk.service.EventServiceImpl;
 import com.mentoring.amarchuk.service.TicketServiceImpl;
 import com.mentoring.amarchuk.service.UserServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Date;
 import java.util.List;
 
-
+@Component
 public class BookingFacadeImpl implements BookingFacade {
 
-    private final EventServiceImpl eventServiceImpl;
-    private final TicketServiceImpl ticketServiceImpl;
-    private final UserServiceImpl userServiceImpl;
-
-    public BookingFacadeImpl(EventServiceImpl eventServiceImpl, TicketServiceImpl ticketServiceImpl, UserServiceImpl userServiceImpl) {
-        this.eventServiceImpl = eventServiceImpl;
-        this.ticketServiceImpl = ticketServiceImpl;
-        this.userServiceImpl = userServiceImpl;
-    }
+    @Autowired
+    private EventServiceImpl eventServiceImpl;
+    @Autowired
+    private TicketServiceImpl ticketServiceImpl;
+    @Autowired
+    private UserServiceImpl userServiceImpl;
 
     @Override
     public Event getEventById(long eventId) {
