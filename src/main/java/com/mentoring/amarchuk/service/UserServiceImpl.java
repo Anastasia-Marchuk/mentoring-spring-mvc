@@ -41,7 +41,12 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User updateUser(User user) {
-        return userDao.updateUser(user);
+        //return userDao.updateUser(user);
+        User userUpdated=userDao.updateUser(user);
+        if(userUpdated==null){
+            throw new NullPointerException("Error updating user "+user);
+        }
+        return userUpdated;
     }
 
     @Override

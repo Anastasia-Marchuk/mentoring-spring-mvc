@@ -6,7 +6,6 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 import java.io.InputStream;
 
-
 public class Jackson {
 
     MultipartFile file;
@@ -21,4 +20,3 @@ public class Jackson {
         return xmlMapper.readValue(inputStream, TicketDto.class);
     }
 }
-

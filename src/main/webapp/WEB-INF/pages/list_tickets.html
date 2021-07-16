@@ -62,10 +62,10 @@ td {
 
             <tbody>
             <tr th:each="ticket : ${allTickets}">
-                <td th:text="${ticket.getEventId()}"></td>
-                <td th:text="${ticket.getUserId()}"></td>
-                <td th:text="${ticket.getCategory()}"></td>
-                <td th:text="${ticket.getPlace()}"></td>
+                <td th:text="${ticket.getEventId()}">1</td>
+                <td th:text="${ticket.getUserId()}">2</td>
+                <td th:text="${ticket.getCategory()}">PREMIUM</td>
+                <td th:text="${ticket.getPlace()}">8</td>
                 <td>
                     <a class="aDelete" th:href="@{/deleteTicket/{id}(id=${ticket.getEventId})}">Cancel</a>
                 </td>
@@ -76,7 +76,7 @@ td {
     </div>
 </section>
 <p><a href="/">
-    <button><a th:href="@{/pdf}">Open PDF</a></button>
+    <button><a th:href="@{/pdfTickets}">Open PDF</a></button>
 <p></a></p>
 </body>
 

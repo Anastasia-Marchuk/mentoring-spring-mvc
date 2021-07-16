@@ -6,7 +6,6 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
 import java.util.List;
-import java.util.Map;
 
 
 @JacksonXmlRootElement(localName = "TicketDto")
@@ -31,11 +30,6 @@ public class TicketDto {
                 "tickets=" + listTickets +
                 '}';
     }
-
-//    public Map<String, Ticket> getTickets() {
-//        return mapTickets;
-//
-//    }
 
     public List<Ticket> getTickets() {
         return listTickets;

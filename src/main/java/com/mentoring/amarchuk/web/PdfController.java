@@ -38,7 +38,22 @@ public class PdfController {
         FileOutputStream fileOutputStream = new FileOutputStream("html.pdf");
         PdfWriter writer = PdfWriter.getInstance(document, fileOutputStream);
         document.open();
-        XMLWorkerHelper.getInstance().parseXHtml(writer, document, new FileInputStream("src/main/webapp/WEB-INF/pages/list_users(tickets).html"));
+        XMLWorkerHelper.getInstance().parseXHtml(writer, document, new FileInputStream("src/main/webapp/WEB-INF/pages/pdf_tickets.html"));
+        document.close();
+
+        return new FileSystemResource("html.pdf");
+    }
+
+    @GetMapping(value = "/pdf", produces = MediaType.APPLICATION_PDF_VALUE)
+    @ResponseBody
+    public FileSystemResource getFileUsers(Model model) throws IOException, DocumentException {
+        LOGGER.debug("Get pdf of tickets");
+        model.addAttribute("allTickets", bookingFacade.getAllUsers());
+        Document document = new Document();
+        FileOutputStream fileOutputStream = new FileOutputStream("html.pdf");
+        PdfWriter writer = PdfWriter.getInstance(document, fileOutputStream);
+        document.open();
+        XMLWorkerHelper.getInstance().parseXHtml(writer, document, new FileInputStream("src/main/webapp/WEB-INF/pages/list_users.html"));
         document.close();
 
         return new FileSystemResource("html.pdf");

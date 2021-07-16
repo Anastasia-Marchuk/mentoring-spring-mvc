@@ -44,9 +44,17 @@ public class UserDaoList implements UserDao {
 
     @Override
     public User updateUser(User user) {
-        users.remove(users.stream().filter(o -> o.getId() == user.getId()).collect(Collectors.toList()).get(0));
-        users.add(user);
-        return users.get((int) user.getId());
+//        users.remove(users.stream().filter(o -> o.getId() == user.getId()).collect(Collectors.toList()).get(0));
+//        users.add(user);
+//        return users.get((int) user.getId());
+        for (User u: users) {
+            if(u.getId()==user.getId()){
+                int index=users.indexOf(u);
+                users.set(index,user);
+                return user;
+            }
+        }
+        return null;
     }
 
     @Override
