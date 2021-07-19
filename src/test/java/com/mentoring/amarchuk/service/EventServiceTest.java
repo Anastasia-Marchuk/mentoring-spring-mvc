@@ -20,11 +20,11 @@ import static org.mockito.Mockito.when;
 @ExtendWith(MockitoExtension.class)
 class EventServiceTest {
 
-    @InjectMocks
-    EventServiceImpl eventService;
-
     @Mock
     EventDao eventDao;
+
+    @InjectMocks
+    EventServiceImpl eventService;
 
     Event event1 = new Event((long) 1, "TestEvent", new Date("07/07/2021"));
     Event event2 = new Event((long) 1, "TestEvent", new Date("07/07/2021"));
