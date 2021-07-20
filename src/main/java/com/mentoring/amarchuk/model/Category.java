@@ -1,8 +1,5 @@
 package com.mentoring.amarchuk.model;
 
-/**
- * Created by Artsiom Prokharau 02.07.2021
- */
 
 
 public enum Category {
